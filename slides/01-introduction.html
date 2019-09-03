@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="author" content="SSI">
-  <title>SABS</title>
+  <title>Best Practices in Developing Software</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -33,13 +33,81 @@
     <div class="slides">
 
 <section id="title-slide">
-  <h1 class="title">SABS</h1>
+  <h1 class="title">Best Practices in Developing Software</h1>
   <p class="author">SSI</p>
 </section>
 
-<section id="sabs-intro-day-4" class="slide level1">
-<h1>SABS intro day 4</h1>
-<p>Introduction</p>
+<section id="agenda-day-4" class="slide level2">
+<h2>Agenda: Day 4</h2>
+</section>
+<section id="ssi---some-experiences" class="slide level2">
+<h2>SSI - Some Experiences</h2>
+</section>
+<section id="barriers-to-writing-good-code" class="slide level2">
+<h2>Barriers to Writing Good Code</h2>
+<ul>
+<li>Research goals take precedence</li>
+<li>Feels like no progress being made</li>
+<li>Bewildering array of practices - which ones?</li>
+</ul>
+</section>
+<section id="technical-debt" class="slide level2">
+<h2>“Technical Debt”</h2>
+<p><em>“Reflects the implied cost of additional rework caused by choosing an easy or limited solution now instead of using a better approach that would take longer.”</em></p>
+</section>
+<section id="technical-debt-1" class="slide level2">
+<h2>“Technical Debt”</h2>
+<ul>
+<li>Like financial debt - gathers ‘interest’ over time</li>
+<li>Tech. debt paid off in maintenance</li>
+<li>If not addressed, software becomes unable to evolve</li>
+<li>Many applications just replaced due to prohibitive maintenance costs</li>
+</ul>
+<p>Moral: deal with maintenance <em>early</em> and <em>often</em></p>
+</section>
+<section id="importance-of-maintainability" class="slide level2">
+<h2>Importance of Maintainability</h2>
+<p>The IEEE Standard Glossary of Software Engineering Terminology defines maintainability as:</p>
+<p><em>“The ease with which a software system or component can be modified to correct faults, improve performance or other attributes, or adapt to a changed environment.”</em></p>
+</section>
+<section id="what-is-maintainable-software" class="slide level2">
+<h2>What is Maintainable Software?</h2>
+<p>Helps you to:</p>
+<ul>
+<li>Fix bugs without introducing new ones</li>
+<li>Add new features, without introducing new bugs</li>
+<li>Make a fix that prevents a bug from re-occurring</li>
+<li>Make changes to support new environments, operating systems or tools</li>
+<li>Bring new developers on board your project</li>
+<li>Improve usability</li>
+<li>Increase performance</li>
+</ul>
+</section>
+<section id="benefits-of-maintainability" class="slide level2">
+<h2>Benefits of Maintainability</h2>
+<p>In general:</p>
+<ul>
+<li>Reduces technical debt</li>
+<li>Makes you more productive</li>
+<li>Much easier to collaborate around software</li>
+</ul>
+</section>
+<section id="disposable-code" class="slide level2">
+<h2>“Disposable” Code?</h2>
+<p>Writing code to prove a concept or perform quick calculation, discard it.</p>
+<p>But: - Are you sure you (or others) will never use it again? - Small maintainability investments now = easier to pick up later + An ‘insurance policy’ against future use</p>
+</section>
+<section id="general-hints-and-tips" class="slide level2">
+<h2>General Hints and Tips</h2>
+<ul>
+<li>Always assume code will be used by others
+<ul>
+<li>A future version of yourself!</li>
+</ul></li>
+<li>Prevention is better (and cheaper) than cure</li>
+<li>Remember code generally write once, read many</li>
+<li>Strike balance between practice adoption and research progress</li>
+</ul>
 </section>
     </div>
   </div>
