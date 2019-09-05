@@ -11,7 +11,7 @@ keypoints:
 ---
 FIXME
 
-## Naming Variables
+## Naming Things
 
 The careful selection of names is very important to understanding. Cryptic names of components, modules, classes, functions, arguments, exceptions and variables can lead to confusion about the role that these components play.
 
@@ -20,7 +20,7 @@ Good naming is fundamental to good design, because source code represents the mo
 ~~~
 out(p(f(v), 2) + 1)
 
-print(power(fibonacci(argument), 2) + 1)
+print(process(fibonacci(argument), 2) + 1)
 ~~~
 {: .language-python}
 
@@ -56,12 +56,42 @@ There are some restrictions. Comments that simply restate what the code does are
 If the first thing in a function is a string that isn't assigned to a variable, that string is attached to the function as its documentation, e.g.:
 
 ~~~
+def fibonacci(n):
+  """Calculate the Fibonacci number of the given integer.
+
+  If the input value n <= 0 then 0 is assumed.
+
+  :param n: integer
+  :returns: fibonacci number
+  """
+  if n <= 0:
+    return 0
+  elif n == 1:
+    return 1
+  else:
+    return fibonacci(n - 1) + fibonacci(n - 2)
+~~~
+{: .language-python}
+
+Note here we are also explicitly documenting our input variables and what is returned by the function. Along with a helpful description of what the function does, this information can act as a *contract* for readers to understand what to expect in terms of behaviour when using the function, as well as how to use it.
+
+A comment string like this is called a *docstring*. We don't need to use triple quotes when we write one, but if we do, we can break the string across multiple lines. This also applies to Python modules, which are essentially files of Python functions. So at the beginning of a module file we can just add a docstring explaining the nature of a module. For example, if `fibonacci()` was included in a module with other math functions, our math functions module could have at the start of it:
+
+~~~
 FIXME
 ~~~
 {: .language-python}
 
+We'll be revisiting module-level docstrings later.
 
-A string like this is called a docstring. We don't need to use triple quotes when we write one, but if we do, we can break the string across multiple lines. This also applies to modules
+A number of different docstring formats exist:
+
+- reST - based on reStructuredText. This is probably more prevalent nowadays, and is used by default in PyCharm
+- Epytext - historically based on a format of docstrings used for Java, in their javadoc documentation
+- Google - they have their own format
+- numpydoc - recommended by Numpy, based on the Google format
+
+The format we're using here for our examples is reST.
 
 > ## Improved Commenting for our Functions
 >

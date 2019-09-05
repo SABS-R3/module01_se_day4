@@ -3,7 +3,7 @@ title: "Introduction to Development Practices"
 teaching: 60
 exercises: 30
 questions:
-- "Key question (FIXME)"
+- "What should I know to write better code?"
 objectives:
 - "First learning objective. (FIXME)"
 keypoints:
@@ -20,7 +20,7 @@ See topic [slides](/slides/01-introduction.html).
 >
 > Imagine your project leader tells you that, quite unexpectedly, some important external collaborators are keen to work with and contribute to the development of some software developed by your group to meet some new, exciting, and potentially publication lucrative, research goals. The software has already been stored within a GitHub repository as a first step to sharing the code, but the software needs to be made suitable for collaboration and it's become obvious the software has a long way to go to be ready.
 >
-> In groups of 4 or 5, take a look at the GitHub code repository at https://github.com/softwaresaved/rf4. Examine the contents of the repository (code, documentation, other assets) and as a group discuss what needs to be improved to get the software ready for your collaborators to contribute to it. Make a list of issues on what would make it difficult to use, install, maintain, extend, and generally collaborate, with this software.
+> In groups of 4 or 5, take a look at the GitHub code repository at <https://github.com/softwaresaved/rf4>. Examine the contents of the repository (code, documentation, other assets) and as a group discuss what needs to be improved to get the software ready for your collaborators to contribute to it. Make a list of issues on what would make it difficult to use, install, maintain, extend, and generally collaborate, with this software.
 >
 > > ## Solution
 > > #### Repository itself
