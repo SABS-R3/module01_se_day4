@@ -13,7 +13,8 @@ objectives:
 - "Learn how to make software projects shareable under an Open Source license"
 - "Use existing tools to turn docstrings into documentation"
 keypoints:
-- "First key point. Brief Answer to questions. (FIXME)"
+- "Community standards make it easier for developers to join an existing project"
+- "Linters are tools used to ensure code conforms to community standards"
 ---
 
 ## Community Practices
