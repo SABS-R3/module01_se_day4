@@ -17,18 +17,12 @@
 
 ## "Technical Debt"
 
-- Like financial debt -  gathers 'interest' over time
+- Like financial debt - gathers 'interest' over time
 - Tech. debt paid off in maintenance
 - If not addressed, software becomes unable to evolve
 - Many applications just replaced due to prohibitive maintenance costs
 
 Moral: deal with maintenance *early* and *often*
-
-## Importance of Maintainability
-
-The IEEE Standard Glossary of Software Engineering Terminology defines maintainability as:
-
-*"The ease with which a software system or component can be modified to correct faults, improve performance or other attributes, or adapt to a changed environment."*
 
 ## What is Maintainable Software?
 
@@ -38,17 +32,37 @@ Helps you to:
 - Add new features, without introducing new bugs
 - Make a fix that prevents a bug from re-occurring
 - Make changes to support new environments, operating systems or tools
-- Bring new developers on board your project
 - Improve usability
 - Increase performance
+- *Verify your code w.r.t. the science!*
 
 ## Benefits of Maintainability
 
-In general:
+Improving maintainability reduces technical debt.
+In general maintainable code allows you to more easily:
 
-- Reduces technical debt
-- Makes you more productive
-- Much easier to collaborate around software
+- Add new features, without introducing bugs
+- Fix a bug, without introducing new ones
+- Improve performance or usability
+- Make changes to support new environments
+- Be more productive
+- Collaborate around software
+
+## Importance of Maintainability
+
+The IEEE Standard Glossary of Software Engineering Terminology defines maintainability as:
+
+*"The ease with which a software system or component can be modified to correct faults, improve performance or other attributes, or adapt to a changed environment."*
+
+## Why else is Maintainability Desirable?
+
+What if:
+
+- A developer with key skills falls ill or leaves the team?
+- Development is restarted following a funding hiatus?
+- New team members are brought on board?
+
+"Software archaeology" is *hard!*
 
 ## "Disposable" Code?
 
