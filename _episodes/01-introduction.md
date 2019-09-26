@@ -14,7 +14,7 @@ keypoints:
 - "Find the right balance between adopting practices and research progress."
 ---
 
-See slides at [slides](/slides/01-introduction.html).
+See slides at [slides](../slides/01-introduction.html).
 
 
 
