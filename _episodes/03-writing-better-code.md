@@ -117,7 +117,7 @@ A number of different docstring formats exist:
 - reST - based on reStructuredText. This is probably more prevalent nowadays, and is used by default in PyCharm
 - Epytext - historically based on a format of docstrings used for Java, in their javadoc documentation
 - Google - they have their own format
-- numpydoc - recommended by Numpy, based on the Google format
+- numpydoc - recommended by Numpy, based on the Google format, quite verbose
 
 The format we're using here for our examples is reST.
 
