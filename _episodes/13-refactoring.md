@@ -1,6 +1,6 @@
 ---
 title: "Refactoring"
-teaching: 0
+teaching: 60
 exercises: 0
 questions:
 - "What is refactoring?"
@@ -36,7 +36,7 @@ Refactoring is the process of making changes to our code, without affecting its 
 So far we've been structuring our code within a single file, but what happens when this file gets too long to manage easily?
 
 As we've seen with Numpy, in Python we're able to separate out code into a **library** and **import** it into the main part of our program.
-This is possible in most programming languages (including C++, as we've seen yesterday)
+This is possible in most programming languages (including C++)
 
 ## Type Annotations
 
