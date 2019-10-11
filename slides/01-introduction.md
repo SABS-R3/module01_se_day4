@@ -1,10 +1,6 @@
 % Best Practices in Developing Software
 % SSI
 
-## Agenda: Day 4
-
-## SSI - Some Experiences
-
 ## Barriers to Writing Good Code
 
 - Research goals take precedence
@@ -75,6 +71,7 @@ But:
 
 ## General Hints and Tips
 
+- Be critical of code you develop and make use of.
 - Always assume code will be used by others
     + A future version of yourself!
 - Prevention is better (and cheaper) than cure

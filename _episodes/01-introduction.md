@@ -9,21 +9,20 @@ objectives:
 - "The benefits of maintainable code."
 - "Identify common problems with code."
 keypoints:
-- "Be critical of your own code."
+- "Be critical of your own code, and that of others before you use it."
 - "With maintainable code, prevention is better (and cheaper) than cure."
 - "Find the right balance between adopting practices and research progress."
 ---
 
 See slides at [slides](../slides/01-introduction.html).
 
-
-
-
 > ## Action Stations!
 >
 > Imagine your project leader tells you that, quite unexpectedly, some important external collaborators are keen to work with and contribute to the development of some software developed by your group to meet some new, exciting, and potentially publication lucrative, research goals. The software has already been stored within a GitHub repository as a first step to sharing the code, but the software needs to be made suitable for collaboration and it's become obvious the software has a long way to go to be ready.
 >
 > In groups of 4 or 5, take a look at the GitHub code repository at <https://github.com/softwaresaved/rf4>. Examine the contents of the repository (code, documentation, other assets) and as a group discuss what needs to be improved to get the software ready for your collaborators to understand it and contribute changes to it. Make a list of issues on what would make it difficult to use, install, maintain, extend, and generally collaborate, with this software. What would be the top three things you would address first and why?
+>
+> Make notes on your findings, and report back the top three things to the class.
 >
 > > ## Solution
 > > #### Repository itself
