@@ -1,7 +1,7 @@
 ---
 title: "Community Practices"
-teaching: 0
-exercises: 0
+teaching: 40
+exercises: 40
 questions:
 - "Why should I follow community standards?"
 - "What community standards exist for Python and C++?"
@@ -82,6 +82,10 @@ As well as checking for adherence to a style guide, many linters also attempt to
 One example of this is checking that there are no unused or undefined variables - an unused or undefined variable may be the result of a typo.
 Because of this, the process of linting is particularly important for languages which are no typically compiled, such as Python.
 Some of the benefits of linting, such as checking for undefined variables, happen at compile time when using a compiled language such as C++.
+
+## Building Documentation with Sphinx
+
+<!-- Demo, not practical -->
 
 {% include links.md %}
 
