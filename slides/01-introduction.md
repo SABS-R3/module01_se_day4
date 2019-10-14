@@ -22,18 +22,6 @@ Moral: deal with maintenance *early* and *often*
 
 ## Benefits of Maintainability
 
-Helps you to:
-
-- Fix bugs without introducing new ones
-- Add new features, without introducing new bugs
-- Make a fix that prevents a bug from re-occurring
-- Make changes to support new environments, operating systems or tools
-- Improve usability
-- Increase performance
-- *Verify your code w.r.t. the science!*
-
-## Benefits of Maintainability
-
 Improving maintainability reduces technical debt.
 In general maintainable code allows you to more easily:
 
@@ -43,6 +31,7 @@ In general maintainable code allows you to more easily:
 - Make changes to support new environments
 - Be more productive
 - Collaborate around software
+- *Verify your code w.r.t. the science!*
 
 ## Importance of Maintainability
 
