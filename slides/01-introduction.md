@@ -20,7 +20,7 @@
 
 Moral: deal with maintenance *early* and *often*
 
-## What is Maintainable Software?
+## Benefits of Maintainability
 
 Helps you to:
 

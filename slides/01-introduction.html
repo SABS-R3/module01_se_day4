@@ -9,12 +9,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
   <link rel="stylesheet" href="reveal.js/css/reveal.css">
-  <style type="text/css">
-      code{white-space: pre-wrap;}
-      span.smallcaps{font-variant: small-caps;}
-      span.underline{text-decoration: underline;}
-      div.column{display: inline-block; vertical-align: top; width: 50%;}
-  </style>
+  <style type="text/css">code{white-space: pre;}</style>
   <link rel="stylesheet" href="reveal.js/css/theme/white.css" id="theme">
   <!-- Printing and PDF exports -->
   <script>
@@ -32,7 +27,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide">
+<section>
   <h1 class="title">Best Practices in Developing Software</h1>
   <p class="author">SSI</p>
 </section>
@@ -46,21 +41,21 @@
 </ul>
 </section>
 <section id="technical-debt" class="slide level2">
-<h2>“Technical Debt”</h2>
-<p><em>“Reflects the implied cost of additional rework caused by choosing an easy or limited solution now instead of using a better approach that would take longer.”</em></p>
+<h2>&quot;Technical Debt&quot;</h2>
+<p><em>&quot;Reflects the implied cost of additional rework caused by choosing an easy or limited solution now instead of using a better approach that would take longer.&quot;</em></p>
 </section>
 <section id="technical-debt-1" class="slide level2">
-<h2>“Technical Debt”</h2>
+<h2>&quot;Technical Debt&quot;</h2>
 <ul>
-<li>Like financial debt - gathers ‘interest’ over time</li>
+<li>Like financial debt - gathers 'interest' over time</li>
 <li>Tech. debt paid off in maintenance</li>
 <li>If not addressed, software becomes unable to evolve</li>
 <li>Many applications just replaced due to prohibitive maintenance costs</li>
 </ul>
 <p>Moral: deal with maintenance <em>early</em> and <em>often</em></p>
 </section>
-<section id="what-is-maintainable-software" class="slide level2">
-<h2>What is Maintainable Software?</h2>
+<section id="benefits-of-maintainability" class="slide level2">
+<h2>Benefits of Maintainability</h2>
 <p>Helps you to:</p>
 <ul>
 <li>Fix bugs without introducing new ones</li>
@@ -72,7 +67,7 @@
 <li><em>Verify your code w.r.t. the science!</em></li>
 </ul>
 </section>
-<section id="benefits-of-maintainability" class="slide level2">
+<section id="benefits-of-maintainability-1" class="slide level2">
 <h2>Benefits of Maintainability</h2>
 <p>Improving maintainability reduces technical debt. In general maintainable code allows you to more easily:</p>
 <ul>
@@ -87,7 +82,7 @@
 <section id="importance-of-maintainability" class="slide level2">
 <h2>Importance of Maintainability</h2>
 <p>The IEEE Standard Glossary of Software Engineering Terminology defines maintainability as:</p>
-<p><em>“The ease with which a software system or component can be modified to correct faults, improve performance or other attributes, or adapt to a changed environment.”</em></p>
+<p><em>&quot;The ease with which a software system or component can be modified to correct faults, improve performance or other attributes, or adapt to a changed environment.&quot;</em></p>
 </section>
 <section id="why-else-is-maintainability-desirable" class="slide level2">
 <h2>Why else is Maintainability Desirable?</h2>
@@ -97,12 +92,12 @@
 <li>Development is restarted following a funding hiatus?</li>
 <li>New team members are brought on board?</li>
 </ul>
-<p>“Software archaeology” is <em>hard!</em></p>
+<p>&quot;Software archaeology&quot; is <em>hard!</em></p>
 </section>
 <section id="disposable-code" class="slide level2">
-<h2>“Disposable” Code?</h2>
+<h2>&quot;Disposable&quot; Code?</h2>
 <p>Writing code to prove a concept or perform quick calculation, discard it.</p>
-<p>But: - Are you sure you (or others) will never use it again? - Small maintainability investments now = easier to pick up later + An ‘insurance policy’ against future use</p>
+<p>But: - Are you sure you (or others) will never use it again? - Small maintainability investments now = easier to pick up later + An 'insurance policy' against future use</p>
 </section>
 <section id="general-hints-and-tips" class="slide level2">
 <h2>General Hints and Tips</h2>
@@ -128,14 +123,12 @@
       // Full list of configuration options available at:
       // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
-        // Push each slide change to the browser history
-        history: true,
 
         // Optional reveal.js plugins
         dependencies: [
           { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
           { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
-          { src: 'reveal.js/plugin/notes/notes.js', async: true }
+              { src: 'reveal.js/plugin/notes/notes.js', async: true }
         ]
       });
     </script>
