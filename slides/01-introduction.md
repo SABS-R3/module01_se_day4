@@ -54,6 +54,7 @@ What if:
 Writing code to prove a concept or perform quick calculation, discard it.
 
 But:
+
 - Are you sure you (or others) will never use it again?
 - Small maintainability investments now = easier to pick up later
     + An 'insurance policy' against future use
