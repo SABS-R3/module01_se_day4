@@ -44,7 +44,29 @@ There are common naming recommendations:
 
 ### Comments
 
-Source code tells the reader what the code does. Comments allow us to provide the reader with additional information - it's always a good idea to keep others in mind when writing code.
+Source code tells the reader what the code does. Comments allow us to provide the reader with additional information
+ - it's always a good idea to keep others in mind when writing code. As a reminder, you can add a comment using
+  `#` symbol on a line:
+
+~~~
+def fahr_to_cels(fahr):
+    # Convert temperature in Fahrenheit to Celsius
+    cels = (fahr + 32) * (5 / 9)
+    return cels
+~~~
+{: .language-python}
+
+You can also add these at the end of lines, e.g.:
+
+~~~
+def fahr_to_cels(fahr):
+    cels = (fahr + 32) * (5 / 9) # Convert temperature in Fahrenheit to Celsius
+    return cels
+~~~
+{: .language-python}
+
+Python doesn't have any multi-line comments, like you may have seen in other languages like C++ or Java. However, there
+ are ways to do it using *docstrings*, which are recommended in certain cases, as we'll see in a moment. 
 
 A good rule of thumb is to assume that someone will **always** read your code at a later date, and this includes a future version of yourself. It can be easy to forget why you did something a particular way in six months time.
 
@@ -56,32 +78,35 @@ The kind of things that need to be commented are:
 - The names of any algorithms or design patterns that have been implemented
 - The expected format of input files or database schemas
 
-There are some restrictions. Comments that simply restate what the code does are redundant, and comments must be accurate, because an incorrect comment causes more confusion than no comment at all.
-
+There are some restrictions. Comments that simply restate what the code does are redundant, and comments must be
+ accurate, because an incorrect comment causes more confusion than no comment at all.
 
 ### Docstrings
 
-If the first thing in a function is a string that isn't assigned to a variable, that string is attached to the function as its documentation, e.g.:
+If the first thing in a function is a string that isn't assigned to a variable, that string is attached to the function as its documentation. Going back to our recursive Fibonacci function:
 
 ~~~
 def fibonacci(n):
-  """Calculate the Fibonacci number of the given integer.
+    """Calculate the Fibonacci number of the given integer.
 
-  If the input value n <= 0 then 0 is assumed.
+    A recursive implementation of Fibonacci.
 
-  :param n: integer
-  :returns: fibonacci number
-  """
-  if n <= 0:
-    return 0
-  elif n == 1:
-    return 1
-  else:
+    :param n: integer
+    :raises ValueError: raised if n is less than zero
+    :returns: fibonacci number
+    """
+    if n < 0:
+        raise ValueError('Fibonacci is not defined for N < 0')
+    if n == 0:
+        return 0
+    if n == 1:
+        return 1
+
     return fibonacci(n - 1) + fibonacci(n - 2)
 ~~~
 {: .language-python}
 
-Note here we are also explicitly documenting our input variables and what is returned by the function. Along with a helpful description of what the function does, this information can act as a *contract* for readers to understand what to expect in terms of behaviour when using the function, as well as how to use it.
+Note here we are also explicitly documenting our input variables, what is returned by the function, and also when the `ValueError` exception is raised. Along with a helpful description of what the function does, this information can act as a *contract* for readers to understand what to expect in terms of behaviour when using the function, as well as how to use it.
 
 A comment string like this is called a *docstring*. We don't need to use triple quotes when we write one, but if we do, we can break the string across multiple lines. This also applies to Python modules, which are essentially files of Python functions, and methods within classes.
 
@@ -146,7 +171,7 @@ The format we're using here for our examples is reST.
 > > def fahr_to_celsius(fahr):
 > >     """Convert Fahrenheit to Celsius.
 > >
-> >     Uses standard Fahrenheit to Celsius formula
+> >     Uses standard Fahrenheit to Celsius formula.
 > >
 > >     :param fahr: float temperature in Fahrenheit
 > >     :returns: float temperature in Celsius
@@ -157,7 +182,7 @@ The format we're using here for our examples is reST.
 > > def fahr_to_kelvin(fahr):
 > >     """Convert Fahrenheight to Kelvin.
 > >
-> >     Uses standard Fahrenheit to Kelvin formula
+> >     Uses standard Fahrenheit to Kelvin formula, making use of fahr_to_celsius function.
 > >
 > >     :param fahr: float temperature in Fahrenheit
 > >     :returns: float temperature in Kelvin
