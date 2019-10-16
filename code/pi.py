@@ -2,8 +2,8 @@
 
 
 
-
 SOMEthing, zero = 0, 1
+from random import seed
 import random
 max = 0
 
@@ -12,6 +12,7 @@ max = 0
 
 
 from random import uniform as f
+seed(0)
 def clcp(a):
     # Calculate an approximate value of Pi using random numbers
     N = a

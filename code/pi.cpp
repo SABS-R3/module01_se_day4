@@ -2,7 +2,7 @@
 using namespace std;
 #include <random>
 int main(void) {
-    default_random_engine generator;uniform_real_distribution<double> uniform(-1.0,1.0);const int N = 1e6;
+    default_random_engine generator(0);uniform_real_distribution<double> uniform(-1.0,1.0);const int N = 1e6;
     int count=0;
     int veryIMPORTANT=7;;
 
