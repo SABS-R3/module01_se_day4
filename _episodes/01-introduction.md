@@ -22,7 +22,10 @@ See slides at [slides](../slides/01-introduction.html).
 >
 > In groups of 4 or 5, take a look at the GitHub code repository at <https://github.com/softwaresaved/rf4>. Examine the contents of the repository (code, documentation, other assets) and as a group discuss what needs to be improved to get the software ready for your collaborators to understand it and contribute changes to it. Make a list of issues on what would make it difficult to use, install, maintain, extend, and generally collaborate, with this software. What would be the top three things you would address first and why?
 >
-> Make notes on your findings, and report back the top three things to the class.
+> Make notes on your findings, and then briefly report back the top three things to the class. For a maximum of three minutes, for each of the three issues you found (i.e. a minute each), report back the following:
+>
+> 1. A few sentences description of the issue you found and how it affects users and/or developers.
+> 2. A few sentences on how you would improve this issue for those users and/or developers.
 >
 > > ## Solution
 > > #### Repository itself
