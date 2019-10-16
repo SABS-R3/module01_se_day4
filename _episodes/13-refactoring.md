@@ -18,18 +18,15 @@ keypoints:
 
 ## Refactoring
 
-Refactoring is the process of making changes to our code, without affecting its behaviour.
-
 > ## Refactoring
 > > Code refactoring is the process of restructuring existing computer code—changing the factoring—without changing its external behavior. Refactoring is intended to improve nonfunctional attributes of the software. Advantages include improved code readability and reduced complexity; these can improve source-code maintainability and create a more expressive internal architecture or object model to improve extensibility.
 > >
 > > -- Wikipedia - Code refactoring
 {: .callout}
 
-> ## Refactoring Support in IDEs
-> While most IDEs provide some support for automated refactoring, this tends not to work so well with dynamically typed languages like Python.
-> When refactoring a statically typed language, it is easy for the IDE to recognise that one use of a variable, function or class is the same as another, since any use of the same identifier across multiple files must have been explicitly identified (by e.g. including the header files).
-> Dynamic languages, like Python, do not have this requirement, so it is much more difficult to check that an identifier refers to the same object.
+While most IDEs provide some support for automated refactoring, this tends not to work so well with dynamically typed languages like Python.
+When refactoring a statically typed language, it is easy for the IDE to recognise that one use of a variable, function or class is the same as another, since any use of the same identifier across multiple files must have been explicitly identified (by e.g. including the header files).
+Dynamic languages, like Python, do not have this requirement, so it is much more difficult to check that an identifier refers to the same object.
 
 ## Modules
 
