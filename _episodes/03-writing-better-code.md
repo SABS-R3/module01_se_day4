@@ -214,12 +214,12 @@ The format we're using here for our examples is reST.
 > ## Improving our Managing Academics and Data Analysis Codes
 >
 > After writing code and getting it to work, it's a good habit to reflect on what you've written and see if it's readability/maintainability can be improved.
-> See if you can improve your Managing Academics code you wrote in both the object oriented and recursive paradigms, and your Numpy/Matplotlib code, by doing the following:
+> See if you can improve your Managing Academics code you wrote earlier in the week, and your Numpy/Matplotlib code, by doing the following:
 >
 > - Rename your variables, functions, and methods to be more descriptive appropriate to their context.
 > - Add comments and docstrings to describe behaviour.
 >
-> Reference implementations of the previous Managing Academic code examples can be found in the `code` directory, so feel free to use and amend these if you prefer.
+> A reference implementation of the previous Managing Academic code example can be found in the `code` directory, so feel free to use and amend these if you prefer.
 >
 > Briefly discuss and compare your improvements with someone next to you. Based on your discussions, can you further improve your code in the above ways?
 {: .challenge}
