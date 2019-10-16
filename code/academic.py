@@ -1,3 +1,5 @@
+ #!/usr/bin/env python3
+
 class Paper:
     def __init__(self, title):
         self.title = title
@@ -33,7 +35,7 @@ class Academic(Person):
     def add_staff(self, academic):
         if academic not in self.staff:
             self.staff.append(academic)
-    
+
     @property
     def all_papers(self):
         papers = list(self.papers)
@@ -43,12 +45,13 @@ class Academic(Person):
         return papers
 
 
-academics = [Academic(name) for name in ['Alice', 'Bob', 'Carol', 'David']]
-alice = academics[0]
-bob = academics[1]
-alice.add_staff(bob)
+if __name__ == "__main__":
+    academics = [Academic(name) for name in ['Alice', 'Bob', 'Carol', 'David']]
+    alice = academics[0]
+    bob = academics[1]
+    alice.add_staff(bob)
 
-alice.write_paper('A science paper')
-bob.write_paper('Another science paper')
+    alice.write_paper('A science paper')
+    bob.write_paper('Another science paper')
 
-print(alice.all_papers)
+    print(alice.all_papers)
