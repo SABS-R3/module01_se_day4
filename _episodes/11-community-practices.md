@@ -205,7 +205,7 @@ That's enough for now, we'll be seeing much more about it soon.
 
 
 > ## Action Stations (Again)!
-> This time we're going to look at a particularly good example of a software project.
+> This time we're going to look at a generally good example of a real software project.
 >
 > Imagine that your collaborators have now asked you to contribute to one of their projects.
 > They've sent you a link to the repository in GitHub and want you to familiarise yourself with the code before you begin making your changes.
