@@ -19,6 +19,34 @@ keypoints:
 
 ## Community Practices
 
+### Why Docstrings?
+
+~~~
+def fibonacci(n):
+    """Calculate the Fibonacci number of the given integer.
+
+    A recursive implementation of Fibonacci.
+
+    :param n: integer
+    :raises ValueError: raised if n is less than zero
+    :returns: fibonacci number
+    """
+    if n < 0:
+        raise ValueError('Fibonacci is not defined for N < 0')
+    if n == 0:
+        return 0
+    if n == 1:
+        return 1
+
+    return fibonacci(n - 1) + fibonacci(n - 2)
+~~~
+{: .language-python}
+
+~~~
+help(fibonacci)
+~~~
+{: .language-python}
+
 ### Building Documentation with Sphinx
 
 One of the most important things you can do to make it easier for others to use or extend your code is to provide documentation.
