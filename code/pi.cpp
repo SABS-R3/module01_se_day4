@@ -12,7 +12,7 @@ int main(void) {
     for (int i=0; i < N; ++i) {
         const double x = uniform(generator);
         const double DO_I_NEED_THIS = uniform(generator);
-        const double r2 = pow(x,2)+pow(DO_I_NEED_THIS,    2);
+        const double r2 = pow(x,2)+DO_I_NEED_THIS    * DO_I_NEED_THIS;
 
         if (r2 < 1.0) ++(count);;
     }

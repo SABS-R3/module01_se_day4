@@ -215,6 +215,12 @@ That's enough for now, we'll be seeing much more about it soon.
 > Make a list of things which have been done to make it easier for people to use, install, maintain, extend and generally collaborate, with this software.
 > Is there anything missing that you would find useful?
 >
+> Make notes on your findings, and then briefly report back the top three things to the class.
+> For a maximum of three minutes, for each of the three issues you found (i.e. a minute each), report back the following:
+>
+> 1. A few sentences description of what you've found
+> 2. A few sentences on how this benefits users of developers of the software
+>
 > > ## Solution
 > > #### Repository itself
 > > - Repo name is the name of the project

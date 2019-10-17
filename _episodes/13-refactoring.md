@@ -137,6 +137,13 @@ print(conversions.fahr_to_kelvin(32), 'K')
 ~~~
 {: .output}
 
+> ## Security Alert!
+>
+> When using packages that other people have developed it's important to keep up to date with any security fixes.
+> This is particularly important if you are running a service such as a website - any running code exposed to the internet *will* be attacked.
+>
+{: .callout}
+
 > ## Packaging Academics
 >
 > The Academics model is something that could be used as part of a much larger piece of software to help manage academic staff and their publications, such as a Current Research Information System (CRIS).
@@ -163,6 +170,7 @@ print(conversions.fahr_to_kelvin(32), 'K')
 > ['A science paper', 'Another science paper']
 > ~~~
 > {: .output}
+{: .challenge}
 
 ## Type Annotations
 
