@@ -1,7 +1,7 @@
 ---
 title: "Refactoring"
-teaching: 60
-exercises: 0
+teaching: 30
+exercises: 30
 questions:
 - "What is refactoring?"
 - "How should I structure code to separate functionality?"
@@ -137,6 +137,33 @@ print(conversions.fahr_to_kelvin(32), 'K')
 ~~~
 {: .output}
 
+> ## Packaging Academics
+>
+> The Academics model is something that could be used as part of a much larger piece of software to help manage academic staff and their publications, such as a Current Research Information System (CRIS).
+> But, to do that we're going to need it in a suitable form - a Python package...
+>
+> Take the Academics model (just the reusable class definitions) and turn it into a Python package named `academics` to be used from a script:
+>
+> ~~~
+> from academics import Academic
+>
+> academics = [Academic(name) for name in ['Alice', 'Bob', 'Carol', 'David']]
+> alice = academics[0]
+> bob = academics[1]
+> alice.add_staff(bob)
+>
+> alice.write_paper('A science paper')
+> bob.write_paper('Another science paper')
+>
+> print(alice.all_papers)
+> ~~~
+> {: .language-python}
+>
+> ~~~
+> ['A science paper', 'Another science paper']
+> ~~~
+> {: .output}
+
 ## Type Annotations
 
 When talking about type systems in different programming languages, there are two distinctions to be made.
@@ -221,6 +248,42 @@ HelloWorld!
 As we can see, although PyCharm tells us that we're using the function incorrectly when we call it with two strings instead of floats, the function does actually work.
 This is because type annotations in Python aren't quite like they are in a statically typed language.
 The type annotations we provide are not used to perform checking at runtime, but are an indicator that tools can use to inform us of potential errors.
+
+## Configuration Files
+
+Remember back when we were looking at the procedural paradigm, before we knew about classes, and we used a nested data structure to represent our academics?
+
+~~~
+academics = [
+    {
+        'name': 'Alice',
+        'papers': [
+            {
+                'title': 'My science paper',
+            },
+            {
+                'title': 'My other science paper',
+            }
+        ]
+    },
+    {
+        'name': 'Bob',
+        'papers': [
+            {
+                'title': 'Bob writes about science',
+        ]
+    }
+]
+~~~
+{: .language-python}
+
+Well, it just so happens that this data structure is almost exactly a **JSON** file.
+JavaScript Object Notation (JSON) is a very common format for handling config files and other complex data structures, which has libraries for processing it in almost all programming languages.
+
+In Python the `json` library is part of the standard library, so we don't need to worry about installing anything extra.
+
+Unfortunately we don't have time to cover this properly, but as usual, the Python documentation is a useful resource.
+See [JSON library](https://docs.python.org/3.7/library/json.html).
 
 > ## Obfuscating Pi
 >
