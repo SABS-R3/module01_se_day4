@@ -19,6 +19,116 @@ keypoints:
 
 ## Community Practices
 
+### Building Documentation with Sphinx
+
+One of the most important things you can do to make it easier for others to use or extend your code is to provide documentation.
+We've seen docstrings already, but wouldn't it be great if you could take the docstrings you've written and turn it into documentation that you can publish online with your code?
+
+Sphinx lets us do exactly that, but it is a little tricky to get set up properly:
+
+~~~
+pip install --user sphinx
+cd code
+mkdir docs
+cd docs
+sphinx-quickstart
+~~~
+{: .language-bash}
+
+The Sphinx quickstart tool provides us with sensible default values, but we need to do a little bit of customisation to `config.py`:
+
+~~~
+# Configuration file for the Sphinx documentation builder.
+#
+# This file only contains a selection of the most common options. For a full
+# list see the documentation:
+# https://www.sphinx-doc.org/en/master/usage/configuration.html
+
+# -- Path setup --------------------------------------------------------------
+
+# If extensions (or modules to document with autodoc) are in another directory,
+# add these directories to sys.path here. If the directory is relative to the
+# documentation root, use os.path.abspath to make it absolute, like shown here.
+#
+import os
+import sys
+sys.path.insert(0, os.path.abspath('..'))
+
+
+# -- Project information -----------------------------------------------------
+
+project = 'code'
+copyright = '2019, Alice'
+author = 'Alice'
+
+# The full version, including alpha/beta/rc tags
+release = '1.0.0'
+
+
+# -- General configuration ---------------------------------------------------
+
+# Add any Sphinx extension module names here, as strings. They can be
+# extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
+# ones.
+extensions = [
+    'sphinx.ext.autodoc',
+]
+
+# Add any paths that contain templates here, relative to this directory.
+templates_path = ['_templates']
+
+# List of patterns, relative to source directory, that match files and
+# directories to ignore when looking for source files.
+# This pattern also affects html_static_path and html_extra_path.
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+
+
+# -- Options for HTML output -------------------------------------------------
+
+# The theme to use for HTML and HTML Help pages.  See the documentation for
+# a list of builtin themes.
+#
+html_theme = 'alabaster'
+
+# Add any paths that contain custom static files (such as style sheets) here,
+# relative to this directory. They are copied after the builtin static files,
+# so a file named "default.css" will overwrite the builtin "default.css".
+html_static_path = ['_static']
+~~~
+{: .language-python}
+
+Once we've made these changes to the configuration, we need to tell Sphinx which Python files we want it to get docstrings from.
+In practice we would create a new documentation page for each module, but for the sake of simplicity, we'll add our module to the main page of the documentation for now.
+To the file `index.rst` we need to add:
+
+~~~
+# file: index.rst
+
+.. automodule:: temperature
+   :members:
+~~~
+
+Now, we should be ready to build our documentation:
+
+~~~
+make html
+~~~
+{: .language-bash}
+
+To view our documentation, we have two options.
+The simplest option is to use PyCharm to open the HTML files in our web browser - right click on `index.html` and select 'open with browser'.
+Secondly, we can use a basic web server that's built in to Python to view it:
+
+~~~
+cd _build/html
+python -m http.server
+~~~
+{: .language-bash}
+
+The in a web browser navigate to `http://localhost:8000` and you should see the same documentation page.
+
+When writing documentation for a real project, there are a few useful websites such as [ReadTheDocs](https://readthedocs.org/) which allow us to host our documentation online for free - for open source projects.
+
 ### Style Guides & Linting
 
 As we have discussed this morning, one of the most important things we can do to make sure our code is accessible to others is to make sure that it is cleanly formatted and uses sensible, descriptive names.
@@ -56,106 +166,42 @@ pip install --user pycodestyle pylint cpplint
 
 When using `pip` we can install packages globally, or for only our user account - we'll install it just for our user account, since that won't interfere with anyone else if we're using a shared computer.
 
-Now that we've installed these linters...
+We'll come back to linting this afternoon when we look at refactoring...
 
-> ## Obfuscating Pi
->
-> In the `code` directory of this lesson are two programs which need linting, one in Python (`pi.py`) and one in C++ (`pi.cpp`).
-> Copy both of these programs and use the appropriate linters to help reformat the code.
->
-> To run `pylint` on a Python file use:
->
-> ~~~
-> pylint pi.py
-> ~~~
-> {: .language-bash}
->
-> To run `cpplint` on a C++ file use:
->
-> ~~~
-> cpplint pi.cpp
-> ~~~
-> {: .language-bash}
->
-> Before you make any changes to 
->
-{: .challenge}
+### Licensing
 
-## Building Documentation with Sphinx
+Software licensing can be a whole topic in itself, so we'll just summarise here.
+Your institution's Intellectual Property (IP) team will be able to offer specific guidance that fits the way your institution thinks about software.
 
-One of the most important things you can do to make it easier for others to use or extend your code is to provide documentation.
-We've seen docstrings already, but wouldn't it be great if you could take the docstrings you've written and turn it into documentation that you can publish online with your code?
+In IP law, software is considered a creative work of literature, so any code you write automatically has copyright protection applied.
+This copyright will usually belong to the institution that employs you, but this may be different for PhD students.
+If you need to check, this should be included in your employment / studentship contract.
 
-Sphinx lets us do exactly that, but it is a little tricky to get set up properly:
+Since software is automatically under copyright, without a license no one may:
+- copy it
+- distribute it
+- modify it
+- extend it
+- use it (unclear - this has not been properly tested in court yet)
 
-~~~
-pip install --user sphinx
-cd code
-sphinx-quickstart
-~~~
-{: .language-bash}
+Fundamentally there are two kinds of license, **Open Source** licenses and **Proprietary** licenses, which serve slightly different purposes.
 
-The Sphinx quickstart tool provides us with sensible default values, but we need to do a little bit of customisation to `config.py`:
+Proprietary licenses are designed to pass on limited rights to end users, and are most suitable if you want to commercialise your software.
+They tend to be customised to suit the requirements of the software and the institution to which it belongs - again your institutions IP team will be able to help here.
 
-~~~
-# Configuration file for the Sphinx documentation builder.
-#
-# This file only contains a selection of the most common options. For a full
-# list see the documentation:
-# https://www.sphinx-doc.org/en/master/usage/configuration.html
-
-# -- Path setup --------------------------------------------------------------
-
-# If extensions (or modules to document with autodoc) are in another directory,
-# add these directories to sys.path here. If the directory is relative to the
-# documentation root, use os.path.abspath to make it absolute, like shown here.
-#
-import os
-import sys
-sys.path.insert(0, os.path.abspath('..'))
+Open Source licenses are designed more to protect the rights of end users - they specifically grant permission to make modifications and redistribute the software to others.
+There are three particularly notable Open Source licenses:
+- BSD
+- MIT
+- GPL
 
 
-# -- Project information -----------------------------------------------------
+### Version Control
 
-project = 'code'
-copyright = '2019, James Graham'
-author = 'James Graham'
+We should mention version control here, as this is a very important aspect of collaborative software development - but we won't cover it properly, since that's coming up later in the course.
+Version control allows you to track the history of all changes to your software - including being able to manage multiple people collaborating on the same files.
 
-# The full version, including alpha/beta/rc tags
-release = '1.0.0'
-
-
-# -- General configuration ---------------------------------------------------
-
-# Add any Sphinx extension module names here, as strings. They can be
-# extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
-# ones.
-extensions = [
-    'sphinx.ext.autodoc',
-]
-
-# Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates']
-
-# List of patterns, relative to source directory, that match files and
-# directories to ignore when looking for source files.
-# This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
-
-
-# -- Options for HTML output -------------------------------------------------
-
-# The theme to use for HTML and HTML Help pages.  See the documentation for
-# a list of builtin themes.
-#
-html_theme = 'alabaster'
-
-# Add any paths that contain custom static files (such as style sheets) here,
-# relative to this directory. They are copied after the builtin static files,
-# so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
-~~~
-{: .language-python}
+That's enough for now, we'll be seeing much more about it soon.
 
 
 > ## Action Stations (Again)!
